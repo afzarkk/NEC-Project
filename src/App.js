@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Navbar/navbar/Header";
+import PopupCard from "./components/Navbar/popupcard/popupcard";
+import successImage from "./assets/images/done-rafiki-2.svg";
+import failedImage from "./assets/images/404-error-page-not-found-with-people-connecting-a-plug-rafiki.svg";
+import { ConnectionSuccess, ConnectionFailed, MigrationSuccess, MigrationFailed } from './components/Navbar/popupcard/popup';
 
-function App() {
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <ConnectionSuccess/>
+      <MigrationFailed/>
+      {/* <MigrationSuccess/> */}
+      {/* {/* <button onClick={() => successPopup}>successPopup</button> */}
+      {/* <button onClick={() => migrationSuccessPopup}>migrationsuccessPopup</button> */} 
     </div>
   );
-}
+};
+
 
 export default App;
